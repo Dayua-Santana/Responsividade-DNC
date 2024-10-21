@@ -1,0 +1,494 @@
+html{
+    font-family: "Manrope", serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /*Faz com que a bordar não altere o tamanaho do elemento*/
+    font-size: 16px;
+}
+
+body{
+    margin: 0px;
+}
+
+button{ 
+    font-family: Manrope;
+    background-color: #f84646;
+    color: #ffffff;
+    height: 45px;
+    font-weight: 800;
+    font-size: 1.18rem;
+    padding: .5rem 1.18rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight:800;
+    margin: 0px;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+
+
+#presentetation-container{
+    padding: 2.5rem 7.5rem; /* 40 = direita e esquerda,120= cima e embaixo*/
+    height: 100vh;
+    background-image: url(./assets/background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#presentetation{
+    width: 37.5rem;
+    position: relative;
+    top:calc(50% - 8,68rem); /*Dividir a altura da div por 2 e fazer a subtração*/
+}
+
+#presentetation p{
+    font-weight: 500;
+}
+
+.container{
+    padding: 5rem 7.5rem; /*Padrão usei tanto para as sections quanto para as divs*/
+    text-align: center;
+}
+
+.container  p{
+    font-family: Manrope;
+    font-size: 16px;
+    margin-top:1rem ;
+    font-weight: 290;
+}
+
+.container button{
+    margin-top: 2rem;
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.1s;
+}
+
+.container button:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.background-gradient{
+    background: linear-gradient(180deg, #fff, #d9d9d9);
+}
+
+.background-red{
+    background-color: #f84646;
+    color: white;
+}
+
+.background-gray{
+    background-color: #f4f5f7;
+}
+
+#qualities{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+#qualities div{
+    line-height: 2rem;
+    text-align: left;
+}
+
+#qualities img{
+    margin: 0 2.8rem; /*0 pra cima e 40 pros lados*/
+}
+.article-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.article-container img{
+    width: 60%;
+}
+
+.article-container:nth-last-child(even) p{
+    text-align: left;
+    align-items: flex-start;
+}
+
+
+.article-container:nth-last-child(odd){
+    flex-direction: row-reverse;
+    margin-top: 7.5rem;
+    position: relative;
+    right: 3rem;
+}
+
+.article-container:nth-last-child(odd) > .article-details{
+    position: relative;
+    left:7rem;
+}
+
+.article-details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.article-details button{
+    font-size: 1rem;
+}
+
+.footer-list{
+    display: flex;
+    text-align: left;
+}
+
+.footer-list > ul > li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.footer-list > ul > li:last-child { /*last-chid = Ultimo filho*/
+    margin-bottom: 0rem;            /* Removi a Margin do ultimo li*/
+}
+
+.footer-list > ul > li:first-child {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.footer-copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8.5rem;
+}
+
+.footer-copyright img{
+    padding: 5px;
+}
+/* 
+.contact-title{
+    font-size: 4rem;
+    font-weight:800;   /*Esse contact TITLE era pra fica como classe do h2
+    margin: 0px;
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /**/
+    gap: 5rem;
+}
+
+.grid-item h3{
+    margin: .5rem 0 0 ;/*Pra tirar a margin é preciso usar dessa forma*/
+                      /*Ex = margin: 0rem 0 0; */ /*pois só assim marign:0; da error*/
+}
+
+.grid-item p{
+    margin: .5rem 0 0; /**/
+}
+
+.grid-container-companies{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1.5rem; /*Espaçamento entre os containers*/
+    margin-top:3rem ;
+}
+
+.grid-item-companies{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.company-1{
+    grid-area: 3/1;
+}
+.company-2{
+    grid-area: 2/2;
+}
+.company-3{
+    grid-area: 3/2
+}
+.company-4{
+    grid-area: 1/3
+}
+.company-5{
+    grid-area: 2/3
+}
+.company-6{
+    grid-area: 3/3
+
+}
+.company-7{
+    grid-area: 2/4
+
+}
+.company-8{
+    grid-area: 3/4
+
+}
+.company-9{
+    grid-area: 3/5
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    #presentetation-container{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container{
+        display: grid;
+        padding: 5rem 4rem;
+    }
+
+    .grid-container{
+        grid-template-columns: repeat( 2, 1fr);
+    }
+
+    .article-container:nth-last-child(even) img{ 
+        position: relative;
+        left: 5rem;
+    }
+
+    .container{
+        container: 4rem;
+    }
+
+    .article-container:nth-last-child(even) p{ 
+        justify-content: center;
+       
+    }
+
+    .article-container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        right:4.5rem;
+    }
+
+    .article-container img{
+        width: 50% ;
+    }
+
+    .article-container:nth-child(odd){
+        position: relative;
+        right:2rem;
+    }
+
+    .article-container:nth-child(even){
+        position: relative;
+        right:3.5rem;
+    }
+    .article-container h2{
+        font-size: 1.5rem;
+    }
+
+    .grid-container-companies{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: auto;
+        gap: 1.5rem; /*Espaçamento entre os containers*/
+        margin-top:3rem ;
+    }
+
+    .company-1{
+        grid-area: auto;
+    }
+    .company-2{
+        grid-area:auto;
+    }
+    .company-3{
+        grid-area: auto;
+    }
+    .company-4{
+        grid-area: auto;
+    }
+    .company-5{
+        grid-area: auto;
+    }
+    .company-6{
+        grid-area: auto;
+    
+    }
+    .company-7{
+        grid-area: auto;
+    
+    }
+    .company-8{
+        grid-area: auto;
+    
+    }
+    .company-9{
+        grid-area: auto;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+
+    #qualities{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        flex-direction: column;
+    }
+
+    #qualities img{
+        transform: rotate(90deg);
+        margin: 2.5rem 0;
+    }
+    .article-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    
+      .article-container:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+    
+      .article-container:nth-child(even) img{
+        position: relative;
+        left: 5rem;
+      }
+      
+      .article-container:nth-child(even) > .article-details {
+        margin: 2rem 0 0 0;
+        margin-right: 5rem;
+      }
+
+      .article-container:nth-child(odd) > .article-details {
+        margin: 2rem 0 0 0;
+        margin-left: 4rem;
+      }
+
+      .article-container:nth-child(odd) img{
+      position: relative;
+      left: 2rem;
+    }
+
+      .article-details {
+        text-align: center;
+        align-items: normal;
+        margin: 0 0 0 0;
+      }
+    
+
+    .article-container > img {
+        width: 105%;
+      }
+      
+    .article-details h2{
+        font-size: 33px;
+    }
+
+    .article-details p{
+        white-space: nowrap;
+    }
+
+
+    .grid-container-companies{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        gap: 1.5rem; /*Espaçamento entre os containers*/
+        margin-top:3rem ;
+    }
+    
+    .company-1{
+        grid-area: auto;
+    }
+    .company-2{
+        grid-area:auto;
+    }
+    .company-3{
+        grid-area: auto;
+    }
+    .company-4{
+        grid-area: auto;
+    }
+    .company-5{
+        grid-area: auto;
+    }
+    .company-6{
+        grid-area: auto;    
+    }
+    .company-7{
+        grid-area: auto;
+
+    }
+    .company-8{
+        grid-area: auto;
+    }
+    .company-9{
+        grid-area: auto;
+    }
+    
+    .grid-item-companies{
+        height: 6rem;
+    }
+
+
+    .footer-list{
+        flex-direction: column;
+    }
+
+
+    .footer-list ul{
+        margin-top: 3rem;
+    }
+
+    .footer-list ul:first-child {
+        margin-top:0 ;
+    }
+
+    .footer-copyright{
+        flex-direction: column-reverse;
+    }
+
+    .footer-copyright > div:first-child{
+        margin-top:4rem ;
+    }
+}
